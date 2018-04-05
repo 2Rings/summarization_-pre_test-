@@ -65,7 +65,7 @@ class Vocab(object):
             self._glove_vocab.append(w)
             # embed_vector = [float(i) for i in pieces[1:]]
             # self._embedding_dict[w] = embed_vector
-            word_weights = np.asarray(values[1:], dtype=np.float32)
+            word_weights = np.asarray(pieces[1:], dtype=np.float32)
             self._glove_embd.append(word_weights)
             self._word_to_id[w] = self._count
             self._id_to_word[self._count] = w
